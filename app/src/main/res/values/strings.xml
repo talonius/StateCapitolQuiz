@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">State Capitol Quiz</string>
+    <string name="caption_start">Start</string>
+    <string name="query_number_of_questions">How many questions would you like to answer?</string>
+    <string name="text_welcome">Welcome to State Capitol Quiz!\n\nThis quiz will help you learn the capitols of the states of the United States.</string>
+    <string name="query_prefix">What is the state capitol of %1$s?</string>
+    <string name="query_prefix_two_states">What are the state capitols of %1$s and %2$s?</string>
+    <string name="caption_check_answer">Check Answer</string>
+    <string name="caption_next_question">Next Question</string>
+    <string name="caption_start_over">Start Over</string>
+    <string name="status_correct">Correct!</string>
+    <string name="status_incorrect">Incorrect!</string>
+    <string name="summary">Questions asked: %1$d\nQuestions correct: %2$d\n\nPercentage: %3$d%%</string>
+    <string-array name="spinner_number_of_questions">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+</resources>
