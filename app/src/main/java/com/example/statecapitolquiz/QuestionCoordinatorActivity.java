@@ -65,6 +65,30 @@ public class QuestionCoordinatorActivity extends AppCompatActivity {
         {
             HandleQuestionActivityOrigin();
         }
+
+        if (callingActivity == ActivityConstants.SUMMARY_ACTIVITY) {
+            HandleApplicationReset();
+        }
+    }
+
+    /**
+     * Executed when the user has optioned to begin a new session from the summary
+     * page.  All of the static variables are reset and the user is redirected to
+     * the MainActivity page to select the number of questions.
+     *
+     * This is necessary because I'm handling state poorly.
+     */
+    protected void HandleApplicationReset() {
+        questionsToBeAsked = 0;
+        questionsAsked = 0;
+        questionsCorrect = 0;
+
+        availableQuestions.clear();
+        availableQuestions.addAll(QuizState.GetQuizStates());
+
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("callingActivity", ActivityConstants.QUESTION_COORDINATOR_ACTIVITY);
+        startActivity(intent);
     }
 
     /**

@@ -40,8 +40,8 @@ public class SummaryActivity extends AppCompatActivity {
      */
     @Override
     public void onBackPressed() {
-        // Return to the MainActivity.  Don't bring the QuestionActivity back up.
-        Intent intent = new Intent(this, MainActivity.class);
+        // Return to the MainActivity (via the QuestionCoordinator).  Don't bring the QuestionActivity back up.
+        Intent intent = new Intent(this, QuestionCoordinatorActivity.class);
         intent.putExtra("callingActivity", ActivityConstants.SUMMARY_ACTIVITY);
         startActivity(intent);
     }
@@ -53,7 +53,8 @@ public class SummaryActivity extends AppCompatActivity {
      * @param view The view in which the click occurred.
      */
     public void activity_summary_ResetOnClick(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, QuestionCoordinatorActivity.class);
+        intent.putExtra("callingActivity", ActivityConstants.SUMMARY_ACTIVITY);
         startActivity(intent);
     }
 }
